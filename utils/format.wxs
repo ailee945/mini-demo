@@ -1,0 +1,29 @@
+function formatCount(count){
+  var counter = parseInt(count)
+  if(counter>100000000){
+    return (counter/100000000).toFixed(1)+'亿'
+  }else if(counter>10000){
+    return (counter/10000).toFixed(1)+'万'
+  }else{
+    return counter+''
+  }
+}
+
+// 在ES6中可以使用 padStart()
+function padLeftZero(time){
+  time = time + ''
+  return ('00' + time).slice(time.length)
+}
+
+function formatDuration(duration){
+  duration = duration / 1000
+  var minute = Math.floor(duration / 60)
+  var second = duration % 60
+  return padLeftZero(minute) + ':' + padLeftZero(second)
+}
+
+// commonJS导出，不支持ESM
+module.exports = {
+  formatCount: formatCount,
+  formatDuration:formatDuration
+}
