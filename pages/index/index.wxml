@@ -1,0 +1,2 @@
+<!-- 渲染一个数据 -->
+<view class="title">{{msg}}</view>
