@@ -23,9 +23,9 @@ export function getMVURL(id) {
  * 请求mv详情
  * @param {number} id 
  */
-export function getMVDetail(id){
-  return cusRequest.get('/mv/detail',{
-    id
+export function getMVDetail(mvid) {
+  return cusRequest.get('/mv/detail', {
+    mvid
   })
 }
 
@@ -33,8 +33,8 @@ export function getMVDetail(id){
  * mv推荐
  * @param {number} id 
  */
-export function getRelatedVideos(id){
-  return cusRequest.get('/related/allvideo',{
+export function getRelatedVideos(id) {
+  return cusRequest.get('/related/allvideo', {
     id
   })
 }

@@ -1,2 +1,3 @@
 <!--pages/detail-video/index.wxml-->
-<text>pages/detail-video/index.wxml</text>
+<video class="video" src="{{}}"></video>
+<view class="desc">{{mvDetail.desc}}</view>
