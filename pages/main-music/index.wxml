@@ -13,5 +13,22 @@
 
 <!-- 推荐歌曲 -->
 <view class="recommend">
-  <area-header title="推荐"></area-header>
+  <area-header title="推荐歌曲"></area-header>
+  推荐歌曲这里接口有问题
+  <!-- <view class="song-list">
+        <block wx:for="{{recommendSongs}}" wx:key="id">
+            <song-item-v1 item="{{item}}"></song-item-v1>
+        </block>
+    </view> -->
+</view>
+
+<!-- 热门歌单 -->
+<song-menu-area songMenu="{{hotSongMenu}}" title="热门歌单" wx:if="{{hotSongMenu.length > 0}}"></song-menu-area>
+
+<!-- 推荐歌单 -->
+<song-menu-area songMenu="{{recommendSongMenu}}" title="推荐歌单"></song-menu-area>
+
+<!-- 巅峰榜 -->
+<view class="ranking">
+  <area-header title="巅峰榜"></area-header>
 </view>
