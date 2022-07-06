@@ -13,13 +13,13 @@
 
 <!-- 推荐歌曲 -->
 <view class="recommend">
-  <area-header title="推荐歌曲"></area-header>
-  推荐歌曲这里接口有问题
+  <area-header title="推荐歌曲" bind:click="handleMoreClick"></area-header>
+  接口有问题
   <!-- <view class="song-list">
-        <block wx:for="{{recommendSongs}}" wx:key="id">
-            <song-item-v1 item="{{item}}"></song-item-v1>
-        </block>
-    </view> -->
+    <block wx:for="{{recommendSongs}}" wx:key="id">
+      <song-item-v1 item="{{item}}"></song-item-v1>
+    </block>
+  </view> -->
 </view>
 
 <!-- 热门歌单 -->
@@ -30,5 +30,9 @@
 
 <!-- 巅峰榜 -->
 <view class="ranking">
-  <area-header title="巅峰榜"></area-header>
+  <area-header title="巅峰榜" showDefault="{{false}}"></area-header>
+  <text>接口有问题</text>
+  <block wx:for="{{rankings}}" wx:key="name">
+    <ranking-area-item item="{{item}}" bindtap="handleRankingItemClick" data-idx="{{index}}"></ranking-area-item>
+  </block>
 </view>

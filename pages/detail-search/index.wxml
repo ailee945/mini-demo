@@ -1,2 +1,12 @@
 <!--pages/detail-search/index.wxml-->
-<text>pages/detail-search/index.wxml</text>
+
+<!-- 搜索框 -->
+<van-search background="#fafafa" shape="round" placeholder="搜索你喜欢的歌曲" />
+
+<!-- 热门搜索 -->
+<view class="hot">
+  <area-header showDefault="{{false}}" title="热门搜索"></area-header>
+  <view class="keywords">
+    
+  </view>
+</view>
