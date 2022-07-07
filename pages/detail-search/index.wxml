@@ -6,7 +6,9 @@
 <!-- 热门搜索 -->
 <view class="hot">
   <area-header showDefault="{{false}}" title="热门搜索"></area-header>
-  <view class="keywords">
-    
+  <view class="list">
+    <block wx:for="{{hotKeywords}}" wx:key="first">
+      <view class="tag">{{item.first}}</view>
+    </block>
   </view>
 </view>

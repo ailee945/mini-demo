@@ -4,7 +4,9 @@ import {
 } from '../../service/api_search'
 
 Page({
-  data: {},
+  data: {
+    hotKeywords: []
+  },
   onLoad() {
     // 获取页面的数据
     this.getPageData()
@@ -12,7 +14,9 @@ Page({
 
   getPageData() {
     getSearchHot().then(res => {
-      console.log(res);
+      this.setData({
+        hotKeywords: res.result.hots
+      })
     })
   }
 })
