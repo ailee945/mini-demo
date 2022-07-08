@@ -28,6 +28,13 @@
           "query": "",
           "launchMode": "default",
           "scene": null
+        },
+        {
+          "name": "music-player",
+          "pathName": "pages/music-player/index",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
         }
       ]
     }

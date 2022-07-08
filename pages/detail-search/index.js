@@ -37,6 +37,8 @@ Page({
     if (!searchValue.length) {
       this.setData({ suggestSongs: [] })
       this.setData({ resultSongs: [] })
+      // 取消发送网络请求
+      debounceGetSearchSuggest.cancel()
       return
     }
 
