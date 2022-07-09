@@ -7,3 +7,8 @@ export function getSongDetail(ids) {
     ids
   })
 }
+export function getSongLyric(id) {
+  return cusRequests.get("/lyric", {
+    id
+  })
+}
