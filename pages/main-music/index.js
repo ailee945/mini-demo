@@ -11,6 +11,7 @@ import {
 } from "../../store/index";
 
 const throttltQueryRect = throttle(queryRect, 300, {
+  // fix: 无法正确获取轮播图高度问题
   leading: true,
   trailing: true
 })

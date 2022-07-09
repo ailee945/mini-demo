@@ -1,4 +1,8 @@
 // components/song-item-v2/index.js
+import {
+  playerStore
+} from '../../store/index'
+
 Component({
   properties: {
     index: {
@@ -19,6 +23,8 @@ Component({
       wx.navigateTo({
         url: '/pages/music-player/index?id=' + id,
       })
+      // 获取页面信息并播放歌曲
+      playerStore.dispatch('playMusicWithSongIdAction')
     }
   }
 })
