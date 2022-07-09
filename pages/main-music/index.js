@@ -10,8 +10,9 @@ import {
   rankingMap
 } from "../../store/index";
 
-const throttltQueryRect = throttle(queryRect,300,{
-  trailing:true
+const throttltQueryRect = throttle(queryRect, 300, {
+  leading: true,
+  trailing: true
 })
 
 Page({

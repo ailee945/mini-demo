@@ -8,7 +8,7 @@ export function getSongDetail(ids) {
   })
 }
 export function getSongLyric(id) {
-  return cusRequests.get("/lyric", {
+  return cusRequest.get("/lyric", {
     id
   })
 }
