@@ -40,6 +40,8 @@ Page({
       id
     })
 
+    // playerStore.dispatch("playMusicWithSongIdAction", { id })
+
     // 2.根据id获取歌曲信息
     // this.getPageData(id)
     this.setupPlayerStoreListener()
@@ -114,9 +116,15 @@ Page({
   },
 
   handlePlayBtnClick: function () {
-    playerStore.dispatch("changeMusicPlayStatusAction")
+    playerStore.dispatch("changeMusicPlayStatusAction", !this.data.isPlaying)
   },
 
+  handlePrevBtnClick: function () {
+    playerStore.dispatch("changeNewMusicAction", false)
+  },
+  handleNextBtnClick: function () {
+    playerStore.dispatch("changeNewMusicAction")
+  },
 
   // ========================   数据监听   ======================== 
   setupPlayerStoreListener: function () {

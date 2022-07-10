@@ -1,20 +1,18 @@
-import {
-  cusRequest
-} from "./index";
+import hyRequest from "./index";
 
 export function getSearchHot() {
-  return cusRequest.get('/search/hot')
+  return hyRequest.get("/search/hot")
 }
 
 export function getSearchSuggest(keywords) {
-  return cusRequest.get('/search/suggest', {
+  return hyRequest.get("/search/suggest", {
     keywords,
-    type: 'mobile'
+    type: "mobile"
   })
 }
 
 export function getSearchResult(keywords) {
-  return cusRequest.get('/search', {
+  return hyRequest.get("/search", {
     keywords
   })
 }

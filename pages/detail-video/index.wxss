@@ -5,21 +5,7 @@ page {
 
 .video {
   position: fixed;
-  top: 0;
   width: 100%;
-}
-
-.desc {
-  /* 显示两行 */
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-line-clamp: 2;
-  -webkit-box-orient: vertical;
-  display: -moz-box;
-  -moz-line-clamp: 2;
-  -moz-box-orient: vertical;
-  word-wrap: break-word;
-  word-break: break-all;
-  white-space: normal;
-  overflow: hidden;
+  top: 0;
+  /* height: 225px; */
 }

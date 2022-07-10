@@ -1,21 +1,20 @@
-import {
-  cusRequest
-} from "./index";
+import hyRequest from './index'
 
-export function getBanner() {
-  return cusRequest.get('/banner', {
+export function getBanners() {
+  return hyRequest.get("/banner", {
     type: 2
   })
 }
 
-export function getRanking(idx) {
-  return cusRequest.get('/top/list', {
+export function getRankings(idx) {
+  return hyRequest.get("/top/list", {
     idx
   })
 }
 
+// cat -> category 类别
 export function getSongMenu(cat = "全部", limit = 6, offset = 0) {
-  return cusRequest.get('/top/playlist', {
+  return hyRequest.get("/top/playlist", {
     cat,
     limit,
     offset
@@ -23,7 +22,7 @@ export function getSongMenu(cat = "全部", limit = 6, offset = 0) {
 }
 
 export function getSongMenuDetail(id) {
-  return cusRequest.get('/playlist/detail/dynamic', {
+  return hyRequest.get("/playlist/detail/dynamic", {
     id
   })
 }

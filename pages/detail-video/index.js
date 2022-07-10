@@ -2,7 +2,7 @@
 import {
   getMVURL,
   getMVDetail,
-  getRelatedVideos
+  getRelatedVideo
 } from '../../service/api_video'
 
 Page({
@@ -13,37 +13,51 @@ Page({
   data: {
     mvURLInfo: {},
     mvDetail: {},
-    relatedVideos: []
+    relatedVideos: [],
+    danmuList: [{
+      text: '第 1s 出现的弹幕',
+      color: '#ff0000',
+      time: 1
+    }, {
+      text: '第 3s 出现的弹幕',
+      color: '#ff00ff',
+      time: 3
+    }]
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
-  onLoad(options) {
-    // 获取 id
+  onLoad: function (options) {
+    // 1.获取传入的id
     const id = options.id
-    // 获取页面数据
+
+    // 2.获取页面的数据
     this.getPageData(id)
+
+    // 3.其他逻辑
   },
-  getPageData(id) {
-    // 请求 mv url
+
+  getPageData: function (id) {
+    // 1.请求播放地址
     getMVURL(id).then(res => {
       this.setData({
         mvURLInfo: res.data
       })
     })
-    // 请求 mv 详情
+
+    // 2.请求视频信息
     getMVDetail(id).then(res => {
       this.setData({
         mvDetail: res.data
       })
     })
-    // 请求相关推荐
-    getRelatedVideos(id).then(res => {
+
+    // 3.请求相关视频
+    getRelatedVideo(id).then(res => {
       this.setData({
         relatedVideos: res.data
       })
     })
-
   }
 })

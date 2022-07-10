@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/main-music/index",
+    "pages/home-music/index",
     "pages/home-video/index",
     "components/video-item-v1/index",
     "pages/detail-video/index",
@@ -16,9 +16,8 @@
     "enablePullDownRefresh": true
   },
   "tabBar": {
-    "list": [
-      {
-        "pagePath": "pages/main-music/index",
+    "list": [{
+        "pagePath": "pages/home-music/index",
         "text": "音乐",
         "iconPath": "assets/images/tabbar/music_normal.png",
         "selectedIconPath": "assets/images/tabbar/music_active.png"
