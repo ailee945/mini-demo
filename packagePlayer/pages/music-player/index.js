@@ -4,7 +4,7 @@
 import {
   audioContext,
   playerStore
-} from '../../store/index'
+} from '../../../store/index'
 
 const playModeNames = ["order", "repeat", "random"]
 

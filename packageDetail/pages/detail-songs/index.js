@@ -2,10 +2,10 @@
 import {
   rankingStore,
   playerStore
-} from '../../store/index'
+} from '../../../store/index'
 import {
   getSongMenuDetail
-} from '../../service/api_music'
+} from '../../../service/api_music'
 
 Page({
   data: {

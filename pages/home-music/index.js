@@ -73,7 +73,7 @@ Page({
   // 事件处理
   handleSearchClick: function () {
     wx.navigateTo({
-      url: '/pages/detail-search/index',
+      url: '/packageDetail/pages/detail-search/index',
     })
   },
 
@@ -99,7 +99,7 @@ Page({
 
   navigateToDetailSongsPage: function (rankingName) {
     wx.navigateTo({
-      url: `/pages/detail-songs/index?ranking=${rankingName}&type=rank`,
+      url: `/packageDetail/pages/detail-songs/index?ranking=${rankingName}&type=rank`,
     })
   },
 
@@ -112,9 +112,9 @@ Page({
   handlePlayBtnClick: function () {
     playerStore.dispatch("changeMusicPlayStatusAction", !this.data.isPlaying)
   },
-  handlePlayBarClick: function() {
+  handlePlayBarClick: function () {
     wx.navigateTo({
-      url: '/pages/music-player/index?id=' + this.data.currentSong.id,
+      url: '/packageDetail/pages/music-player/index?id=' + this.data.currentSong.id,
     })
   },
   // 卸载页面
